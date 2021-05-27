@@ -1,0 +1,14 @@
+<%= link_to "Back to list", movies_path %>
+<hr>
+<hr>
+<h2>Overview</h2>
+<%= @movie.overview %>
+<hr>
+<h2>Poster</h2>
+<%= image_tag(@movie.poster_url, :alt =>"rss feed") %>
+<hr>
+<h2>Rating</h2>
+<%= @movie.rating %>
+<hr>
+<br>
+

@@ -1,0 +1,21 @@
+<h1>MOVIES</h1>
+<hr>
+<br>
+<% @movies.each do |movie| %>
+<hr>
+<h3>Title of the movie</h3>
+<h3><%= movie.title %></h3>
+<hr>
+<p>Overview</p>
+<%= movie.overview %>
+<hr>
+<p>Poster</p>
+<%= image_tag(movie.poster_url, :alt =>"rss feed") %>
+<hr>
+<p>Rating</p>
+<%= movie.rating %>
+<hr>
+<%= link_to "details", movie_path(id:movie.id) %>
+<% end %>
+
+

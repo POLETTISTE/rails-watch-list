@@ -1,12 +1,13 @@
+# frozen_string_literal: true
+
 class ListsController < ApplicationController
-  before_action :set_list, only: [:show, :edit, :update, :destroy]
+  before_action :set_list, only: %i[show edit update destroy]
 
   def index
     @lists = List.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @list = List.new
@@ -17,7 +18,7 @@ class ListsController < ApplicationController
 
     respond_to do |format|
       if @list.save
-        format.html { redirect_to @list, notice: "List was successfully created." }
+        format.html { redirect_to @list, notice: 'List was successfully created.' }
         format.json { render :show, status: :created, location: @list }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -36,5 +37,3 @@ class ListsController < ApplicationController
     params.require(:list).permit(:name)
   end
 end
-
-

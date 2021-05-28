@@ -1,8 +1,14 @@
-<h1>MES LISTES</h1>
-
+<hr>
+<%= link_to 'add a new list', new_list_path %>
+<hr>
+<h1>My List</h1>
+<hr>
 <% @lists.each do |list| %>
 <hr>
-<%= list.name %>
+<%= link_to list.name, list_path(list) %>
 <hr>
 <% end %>
+
+
+
 

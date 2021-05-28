@@ -2,7 +2,9 @@
 
 <h1>formulaire de creation de bookmark</h1>
 
-<%= simple_form_for @bookmark do |f| %>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.input :comment %>
-  <%= f.submit 'validez'  %>
+  <%= f.association :movie %>
+  <%= f.button :submit %>
 <% end %>

@@ -1,0 +1,10 @@
+<h1>FORMULAIRE</h1>
+
+<h1>formulaire de destruction de bookmark</h1>
+
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.button :submit %>
+<% end %>

@@ -4,7 +4,7 @@
     <li class="list-group-item"><%= movie.title %></li>
     <li class="list-group-item"><%= movie.overview %></li>
     <li class="list-group-item"><%= movie.rating %></li>
-    <li class="list-group-item"><img src="<%= movie.poster_url %>" alt="image du film"></li>
+    <li class="list-group-item"><img src="<%= movie.poster_url %>" alt="image du film" class="pic"></li>
      <% movie.bookmarks.each do |bookmark| %>
     <li class="list-group-item"><%= bookmark.comment %><%= link_to "Delete a bookmark" , bookmark_path(bookmark),  method: :delete, data: { confirm: "Are you sure?" }%></li>
   <% end %>
